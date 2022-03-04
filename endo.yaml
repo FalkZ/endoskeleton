@@ -1,0 +1,5 @@
+test:
+  command: echo hello
+
+deno:
+  script: ./test.ts
