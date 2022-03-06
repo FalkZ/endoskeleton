@@ -1,6 +1,6 @@
 # endoskeleton
 
-![picture of endoskeleton](https://deno.land/x/endoskeleton/assets/endoskeleton.jpg) _Picture source: https://creary.net/@ruslankazarez_
+![picture of endoskeleton](https://cdn.deno.land/endoskeleton/versions/0.0.1/raw/assets/endoskeleton.jpg) _Picture source: https://creary.net/@ruslankazarez_
 
 > the task runner from the future
 
