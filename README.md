@@ -1,6 +1,6 @@
 # endoskeleton
 
-![picture of endoskeleton](./assets/endoskeleton.jpg) _Picture source: https://creary.net/@ruslankazarez_
+![picture of endoskeleton](https://deno.land/x/endoskeleton/assets/endoskeleton.jpg) _Picture source: https://creary.net/@ruslankazarez_
 
 > the task runner from the future
 
@@ -17,7 +17,7 @@ Endoskeleton ([pronounced](https://youtube.com/clip/Ugkxq6J1SBGZev4AHYIQwpGqWYhW
 ## Getting started
 
 ```bash
-deno install --allow-read=endo.yaml --allow-write=endo.yaml,.endo-schema.json --allow-run --no-check ./endo.ts
+deno install --allow-read=endo.yaml --allow-write=endo.yaml,.endo-schema.json --allow-run --no-check https://deno.land/x/endoskeleton@0.0.1/endo.ts
 ```
 
 _for Windows: you also need to set the PATH environment variable_
@@ -27,7 +27,7 @@ _for Windows: you also need to set the PATH environment variable_
 ### Update
 
 ```bash
-deno install -f --allow-read=endo.yaml --allow-write=endo.yaml,.endo-schema.json --allow-run --no-check ./endo.ts
+deno install -f --allow-read=endo.yaml --allow-write=endo.yaml,.endo-schema.json --allow-run --no-check https://deno.land/x/endoskeleton@0.0.1/endo.ts
 ```
 
 ## Coming soon
