@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=./.endo-schema.json
+test:
+  command: echo hello ${0}
+
+deno:
+  script: ./test.ts
+  args:
+    foo: 1
+    bar: string ${0}
+  allow:       
+    write: true
+
+
+
+deno2:
+  script: ./test.ts
+  args:
+    foo: 2
+    bar: string
+  allow: all
+
