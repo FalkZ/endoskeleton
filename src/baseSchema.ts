@@ -22,6 +22,10 @@ const baseSchema = {
     ],
   },
   $defs: {
+    templateLiteral: {
+      type: "string",
+      pattern: "^\\$\\{[0-9]+\\}$",
+    },
     stringOrTrue: {
       anyOf: [
         {

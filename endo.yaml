@@ -1,4 +1,7 @@
 # yaml-language-server: $schema=./.endo-schema.json
 pushtag:
   command: git push --tags
+install:
+  command: deno install -f --allow-read=endo.yaml --allow-write=endo.yaml,.endo-schema.json --allow-run --no-check ./endo.ts
+
 

@@ -5,7 +5,7 @@ test:
 deno:
   script: ./test.ts
   args:
-    foo: 1
+    foo: ${0}
     bar: string ${0}
   allow:       
     write: true

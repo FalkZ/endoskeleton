@@ -1,6 +1,7 @@
 import { parse as parseYaml } from "https://deno.land/std@0.63.0/encoding/yaml.ts";
 import { parse } from "https://deno.land/std/flags/mod.ts";
-import { runCommand, loadSchemas } from "./runCommand.ts";
+import { runCommand } from "./runCommand.ts";
+import { loadSchemas } from "./loadSchema.ts";
 
 const text = await Deno.readTextFile("./endo.yaml");
 const config = parseYaml(text);
