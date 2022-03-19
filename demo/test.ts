@@ -1,5 +1,3 @@
-import { Type } from "https://deno.land/x/typebox@0.23.4/src/typebox.ts";
-
 import { args, types } from "../lib.ts";
 
 const r = args(

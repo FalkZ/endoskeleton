@@ -3,6 +3,7 @@ const prefixAllow = (str) => "--allow-" + str;
 export const parseAllow = (allow) => {
   if (!allow) return [];
   if (Array.isArray(allow)) allow.map(prefixAllow);
+  if (allow === "all") return [prefixAllow("all")];
   if (typeof allow === "object")
     return Object.entries(allow)
       .map(([key, value]) => {

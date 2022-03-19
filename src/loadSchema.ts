@@ -12,6 +12,11 @@ export const loadSchema = async (script) => {
   return s;
 };
 
+const retry = (times: number, action: () => Promise<any>) => {
+  if (times <= 1) return action();
+  return action().catch(() => retry(times - 1, action));
+};
+
 export const loadSchemas = async (config) => {
   const schemas = Object.fromEntries(
     await Promise.all(
@@ -45,5 +50,12 @@ export const loadSchemas = async (config) => {
   const s = baseSchema;
   s.properties = schemas;
 
-  await Deno.writeTextFile("./.endo-schema.json", JSON.stringify(s, null, 2));
+  await retry(5, () =>
+    Deno.writeTextFile("./.endo-schema.json", JSON.stringify(s, null, 2))
+  ).catch((e) => {
+    console.error(
+      `The schema: ./.endo-schema.json couldn't be updated (${e.message})`
+    );
+    Deno.exit(1);
+  });
 };
